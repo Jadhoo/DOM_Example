@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!-- to change the heading to "DOM Example" using JS try this -->
+    <!-- document.getElementById("heading").innerHTML = "DOM Example"; -->
+    <h1 id="heading">DOM</h1>
+    <form>
+        <input type="text" name="name" id="username" placeholder="Enter name">
+	    <input type="submit" onclick="return Hello()" value="greet">
+    </form>
+    <!-- first of all the div element is empty-->
+    <!-- to add any text inside the div tag, use dom method using id as shown below -->
+    <!-- document.getElementById("result").innerHTML = "some text result"; -->
+    <div id="result">
+
+    </div>
+
+    <p>helloo </p>
+    <script>
+        function Hello() {
+            //Documnent Object Model
+            var name = document.getElementById("username").value;
+            // console.log("Hello " + name);
+            document.getElementById("result").innerHTML = "Hello " + name;
+            return false;
+        }
+    </script>
+</body>
+</html>
